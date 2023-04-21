@@ -1,0 +1,48 @@
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #494e5b;
+  border-radius: 12px;
+  width: 80%;
+}
+
+.cardLimit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+}
+
+.cover {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.coverBarberShop {
+  margin-top: 3%;
+  width: 100%;
+  height: 30vh;
+  border-radius: 12px;
+}
+
+.profileBarberShop {
+  position: absolute;
+  top: 35%;
+  left: 55%;
+  width: 10%;
+  border-radius: 50%;
+}
+
+.titleBarberShop h2 {
+  color: white;
+  margin-top: 90px;
+  padding: 5px;
+  border-radius: 12px;
+  background-color: #24262c9c;
+}
+
+.groupCards {
+  width: 100%;
+}

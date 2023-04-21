@@ -1,0 +1,111 @@
+.dashBody {
+  display: flex;
+  background-color: #30323d;
+}
+
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  background-color: #494e5b;
+  padding: 10px;
+  min-height: 100vh;
+}
+
+.logo {
+  margin: 15%;
+}
+
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonGroup h5 {
+  color: #d9d9d9;
+  margin: 20px;
+  width: 80%;
+}
+
+.buttonDash {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  background-color: #24262c9c;
+  border-radius: 12px;
+  padding: 7%;
+  margin: 10px;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.buttonDash:hover {
+  background-color: #3c73d2;
+  transition-duration: 0.8s;
+}
+
+.buttonDashDown {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  background-color: #3e41499c;
+  border-radius: 12px;
+  padding: 7%;
+  margin: 10px;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.buttonDashDown:hover {
+  background-color: #3c73d2;
+  transition-duration: 0.8s;
+}
+
+.buttonLogout {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  background-color: #3e41499c;
+  border-radius: 12px;
+  padding: 7%;
+  width: 80%;
+  font-size: 1rem;
+}
+
+.buttonLogout:hover {
+  background-color: #d4244d;
+  transition-duration: 0.8s;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.screen h5 {
+  color: #d9d9d9;
+  font-size: 1.1rem;
+}
+
+.boxLimit {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.boxNav {
+  display: flex;
+  align-items: center;
+  background-color: #3c73d2;
+  border-radius: 0px 0px 0px 30px;
+  width: 23%;
+  margin-bottom: 3%;
+}
+
+.boxNavImage {
+  width: 15%;
+  border-radius: 50px;
+  margin: 10px;
+}
