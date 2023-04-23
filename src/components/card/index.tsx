@@ -1,22 +1,27 @@
-import styles from '../../styles/card/card.module.css'
-import profileBarberShop from '../../../images/profile_barbershop.jpg'
+import styles from "../../styles/card/card.module.css";
+import { StaticImageData } from "next/image";
 
-export default function Card() {
-
-    return (
-        <div className={styles.card}>
-            <img src={profileBarberShop.src} className={styles.imageCard} />
-            <div className={styles.sectionText}>
-              <h3>$TituloServiço</h3>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. 
-              </p>
-              <div className={styles.buttonGroupCard}>
-                <button className={styles.buttonAgendar}>AGENDAR</button>
-              </div>
-            </div>
-          </div>
-        
-    )
+interface cardTypes {
+  nameService: string;
+  description: string;
+  imageCard: StaticImageData;
 }
+
+export const Card: React.FC<cardTypes> = ({
+  nameService,
+  description,
+  imageCard,
+}) => {
+  return (
+    <div className={styles.card}>
+      <img src={imageCard.src} className={styles.imageCard} />
+      <div className={styles.sectionText}>
+        <h3>{nameService}</h3>
+        <p>{description}</p>
+        <div className={styles.buttonGroupCard}>
+          <button className={styles.buttonAgendar}>AGENDAR</button>
+        </div>
+      </div>
+    </div>
+  );
+};

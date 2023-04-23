@@ -1,7 +1,8 @@
 import styles from "../../styles/barbershop/barbershop.module.css";
 import cover from "../../../images/cover.jpg";
 import profileBarberShop from "../../../images/profile_barbershop.jpg";
-import Card from "@/components/card";
+import NewCard from "@/components/newCard";
+import Rodape from "@/components/rodape";
 
 export default function BarberShop() {
   return (
@@ -20,9 +21,9 @@ export default function BarberShop() {
         </div>
 
         <div className={styles.groupCards}>
-          <Card/>
-         
+          <NewCard />
         </div>
+        <Rodape />
       </div>
     </div>
   );

@@ -1,0 +1,17 @@
+.rodapeBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f3f3f3;
+  width: 100%;
+  background-color: #24262c9c;
+  border-radius: 12px;
+  margin: 2%;
+  height: 20vh;
+}
+
+.rodapeBody p {
+  font-size: 1.2rem;
+  margin: 2%;
+}

@@ -1,0 +1,71 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 85%;
+  background-color: #24262c9c;
+  border-radius: 12px;
+  min-height: 50vh;
+}
+
+.cardCreateBody {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleCardCreateBody {
+  top: -5%;
+  background-color: #3c73d2;
+  border-radius: 12px;
+  position: absolute;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 8px 30px 8px 30px;
+}
+
+.cardInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #24262c9c;
+  border-radius: 12px;
+  width: 50%;
+}
+
+.inputTexts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputTexts p {
+  color: #eaeaea;
+}
+
+.viewCard {
+  display: flex;
+  justify-content: center;
+  background-color: #24262c9c;
+  width: 40%;
+  padding: 2% 0 2% 0;
+  border-radius: 12px;
+}
+
+.buttonAccept {
+  background-color: white;
+  margin-top: 2%;
+  padding: 10px;
+  color: #3c73d2;
+  font-weight: 600;
+  border-radius: 12px;
+  width: 20%;
+  align-self: flex-end;
+}
+
+.buttonAccept:hover {
+  background-color: rgb(182, 182, 182);
+}
