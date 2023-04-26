@@ -109,3 +109,21 @@
   border-radius: 50px;
   margin: 10px;
 }
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .sideBar {
+    display: none;
+  }
+
+  .boxLimit {
+    display: none;
+  }
+}

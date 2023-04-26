@@ -1,10 +1,8 @@
 import styles from "../../styles/barbershop/barbershop.module.css";
-import cover from "../../../images/cover.jpg";
-import profileBarberShop from "../../../images/profile_barbershop.jpg";
 import NewCard from "@/components/newCard";
 import Rodape from "@/components/rodape";
 import { useState } from "react";
-import { Button, IconButton } from "@mui/material";
+import { IconButton } from "@mui/material";
 import AddAPhotoIcon from "@mui/icons-material/AddAPhoto";
 
 export default function BarberShop() {
@@ -107,14 +105,14 @@ export default function BarberShop() {
                 />
                 <AddAPhotoIcon
                   sx={{
-                    fontSize: "8rem",
+                    fontSize: "5em",
                     color: "white",
                     backgroundColor: "#3c73d2",
                     padding: "10%",
                     borderRadius: "40px",
                     "&:hover": {
                       backgroundColor: "#2854a2",
-                    },
+                    }
                   }}
                 />
               </IconButton>

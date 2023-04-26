@@ -1,0 +1,9 @@
+.headerMobileBody {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .headerMobileBody {
+    display: block;
+  }
+}
