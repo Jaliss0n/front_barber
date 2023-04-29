@@ -5,17 +5,24 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import MailIcon from '@mui/icons-material/Mail';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import styles from '../../styles/headerMobileBarber/headerMobileBarber.module.css'
+import profile from '../../../images/profile.jpg'
+import { Menu, MenuItem } from '@mui/material';
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import AddBusinessIcon from "@mui/icons-material/AddBusiness";
+import MoreTimeIcon from "@mui/icons-material/MoreTime";
+import LockPersonIcon from "@mui/icons-material/LockPerson";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import LogoutIcon from "@mui/icons-material/Logout";
+import logo from '../../../images/logo.png'
 
 const drawerWidth = 240;
 
@@ -36,38 +43,88 @@ export default function headerMobileBarber(props: Props) {
   };
 
   const drawer = (
-    <div>
-      <Toolbar />
-      <Divider />
+    <div style={{backgroundColor: '#494e5b', height: '100vh'}} >
+      <Toolbar sx={{backgroundColor: '#494e5b', display: 'flex', justifyContent: 'center'}}>
+        <img src={logo.src} className={styles.logoMob}/>
+      </Toolbar>
+      <Divider sx={{backgroundColor: '#948f8f'}} />
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+          <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                 <DashboardIcon sx={{color: '#e9e9e9'}}/> 
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText sx={{color: '#e9e9e9'}}>Dashboard</ListItemText>
             </ListItemButton>
           </ListItem>
-        ))}
+
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                 <AddBusinessIcon sx={{color: '#e9e9e9'}}/> 
+              </ListItemIcon>
+              <ListItemText sx={{color: '#e9e9e9'}}>Barbearia</ListItemText>
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                 <MoreTimeIcon sx={{color: '#e9e9e9'}}/> 
+              </ListItemIcon>
+              <ListItemText sx={{color: '#e9e9e9'}}>Horarios</ListItemText>
+            </ListItemButton>
+          </ListItem>
       </List>
-      <Divider />
+      <Divider sx={{backgroundColor: '#948f8f'}}/>
       <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
+
+          <ListItem disablePadding>
             <ListItemButton>
               <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                 <LockPersonIcon sx={{color: '#e9e9e9'}}/> 
               </ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItemText sx={{color: '#e9e9e9'}}>Dados</ListItemText>
             </ListItemButton>
           </ListItem>
-        ))}
+
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                 <CreditCardIcon sx={{color: '#e9e9e9'}}/> 
+              </ListItemIcon>
+              <ListItemText sx={{color: '#e9e9e9'}}>Pagamentos</ListItemText>
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                 <LogoutIcon sx={{color: '#e9e9e9'}}/> 
+              </ListItemIcon>
+              <ListItemText sx={{color: '#e9e9e9'}}>Sair</ListItemText>
+            </ListItemButton>
+          </ListItem>
       </List>
     </div>
   );
 
   const container = window !== undefined ? () => window().document.body : undefined;
+
+  const [auth, setAuth] = React.useState(true);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setAuth(event.target.checked);
+  };
+
+  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <div className={styles.headerMobileBody}>
@@ -77,9 +134,10 @@ export default function headerMobileBarber(props: Props) {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          backgroundColor: '#24262c9c'
         }}
       >
-        <Toolbar>
+        <Toolbar sx={{display: 'flex', justifyContent: 'space-around'}}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -90,8 +148,27 @@ export default function headerMobileBarber(props: Props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            $Icone da Aplicação
           </Typography>
+          <img alt='profile' src={profile.src} width='10%' style={{borderRadius: '30px'}} onClick={handleMenu}/>
+          <Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={handleClose}>Profile</MenuItem>
+                <MenuItem onClick={handleClose}>My account</MenuItem>
+              </Menu>
         </Toolbar>
       </AppBar>
       <Box

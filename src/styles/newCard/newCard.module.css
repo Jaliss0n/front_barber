@@ -102,6 +102,11 @@
     align-items: center;
   }
 
+  .titleCardCreateBody {
+    position: absolute;
+    left: 3%;
+  }
+
   .cardCreateBody {
     display: flex;
     width: 90%;

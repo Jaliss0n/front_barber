@@ -11,7 +11,6 @@ import profile from "../../../images/profile.jpg";
 import { useNavContext } from "@/context/navProvider";
 import switchScreen from "@/context/switchScreen";
 import { useState } from "react";
-import { Button } from "@mui/material";
 import HeaderMobileBarber from "@/components/headerMobileBarber";
 
 export default function Dash() {
@@ -25,16 +24,6 @@ export default function Dash() {
 
   return (
     <div className={styles.dashBody}>
-      {/* <div className="menu">
-        <button className="menu-toggle" onClick={toggleMenu}>
-          {isOpen ? 'Fechar menu' : 'Abrir menu'}
-        </button>
-        <ul className={`menu-items ${isOpen ? 'open' : ''}`}>
-          <li><a href="#">Item 1</a></li>
-          <li><a href="#">Item 2</a></li>
-          <li><a href="#">Item 3</a></li>
-        </ul>
-      </div> */}
       <HeaderMobileBarber />
       <div className={styles.sideBar}>
         <img className={styles.logo} src={logo.src} width="70%" alt="logo" />
@@ -47,10 +36,6 @@ export default function Dash() {
           </button>
           <button className={styles.buttonDash}>
             <MoreTimeIcon sx={{ marginRight: "20px" }} /> Horarios
-          </button>
-          <button className={styles.buttonDash}>
-            <ContentCutIcon sx={{ marginRight: "20px" }} />
-            Serviços
           </button>
           <h5>Informações Pessoais</h5>
           <button className={styles.buttonDashDown}>
@@ -78,7 +63,7 @@ export default function Dash() {
             <h5>Bem vindo de volta $nomeAdmin</h5>
           </div>
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", width: '100%',  }}>
           {switchScreen(numberPag)}
         </div>
       </div>

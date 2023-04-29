@@ -20,6 +20,7 @@ export default function NewCard() {
   const [description, setDescription] = useState<string>(
     "Descrição de Exemplo"
   );
+  const [price, setPrice] = useState<number>(0);
 
   const [img, setImg] = useState<File | null>(null);
 
@@ -44,7 +45,7 @@ export default function NewCard() {
       >
         <Fade in={open}>
           <div className={styles.modalCard}>
-            <h2 className={styles.titleCardCreateBody}>Criar Corte</h2>
+            <h2 className={styles.titleCardCreateBody}>Criar Serviço</h2>
             <div className={styles.cardCreateBody}>
               <div className={styles.cardInput}>
                 {img ? (
@@ -85,7 +86,7 @@ export default function NewCard() {
                     id="outlined-basic"
                     onChange={(e) => setTitle(e.target.value)}
                     inputProps={{ maxLength: 20 }}
-                    label={<p>Titulo do Corte</p>}
+                    label={<p>Titulo do Serviço</p>}
                     variant="outlined"
                     sx={{ margin: "2.5% 5% 2.5% 5%" }}
                   />
@@ -93,7 +94,16 @@ export default function NewCard() {
                     id="outlined-basic"
                     onChange={(e) => setDescription(e.target.value)}
                     inputProps={{ maxLength: 55 }}
-                    label={<p>Descrição do Corte</p>}
+                    label={<p>Descrição do Serviço</p>}
+                    variant="outlined"
+                    sx={{ margin: "2.5% 5% 2.5% 5%" }}
+                  />
+                  <WhiteTextField
+                    id="outlined-basic"
+                    type="number"
+                    onChange={(e) => setPrice(parseInt(e.target.value))}
+                    inputProps={{ maxLength: 55 }}
+                    label={<p>Preço</p>}
                     variant="outlined"
                     sx={{ margin: "2.5% 5% 2.5% 5%" }}
                   />
@@ -105,6 +115,7 @@ export default function NewCard() {
                   imageCard={img}
                   nameService={title}
                   description={description}
+                  price={price}
                 />
               </div>
               

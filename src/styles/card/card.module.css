@@ -30,13 +30,24 @@
 
 .buttonGroupCard {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+.moneyCard {
+  display: flex;
+  align-items: center;
+}
+
+.buttonGroupCard p {
+  color: white;
 }
 
 .buttonAgendar {
   background-color: #3c73d2;
   padding: 10px;
-  margin-top: 20px;
   border-radius: 12px;
 }
 

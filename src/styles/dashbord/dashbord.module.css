@@ -4,9 +4,11 @@
 }
 
 .sideBar {
+  /* position: fixed; */
+  top: 0;
   display: flex;
   flex-direction: column;
-  width: 22%;
+  width: 22%; /*18%*/
   background-color: #494e5b;
   padding: 10px;
   min-height: 100vh;

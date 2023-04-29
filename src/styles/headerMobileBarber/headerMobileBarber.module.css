@@ -6,4 +6,9 @@
   .headerMobileBody {
     display: block;
   }
+
+  .logoMob {
+    width: 80%;
+    padding: 10%;
+  }
 }
