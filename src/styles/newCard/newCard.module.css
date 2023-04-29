@@ -14,6 +14,20 @@
   justify-content: space-between;
 }
 
+.modalCard {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  background-color: #494e5b;
+  box-shadow: 24;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+}
+
 .titleCardCreateBody {
   top: -5%;
   background-color: #3c73d2;
@@ -66,6 +80,64 @@
   align-self: flex-end;
 }
 
+.buttonAcceptMob,
 .buttonAccept:hover {
   background-color: rgb(182, 182, 182);
+}
+
+.buttonAcceptMob {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  .card {
+    width: 100%;
+  }
+
+  .modalCard {
+    margin-top: 16%;
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .cardCreateBody {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .cardInput {
+    width: 100%;
+    min-height: 60vh;
+  }
+
+  .buttonAccept {
+    display: none;
+  }
+
+  .cardInput {
+    margin-top: 10%;
+  }
+
+  .viewCard {
+    width: 100%;
+    margin-top: 10%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+  }
+
+  .buttonAcceptMob {
+    display: block;
+    background-color: white;
+    margin: 8% 0% 8% 0%;
+    padding: 10px;
+    color: #3c73d2;
+    font-weight: 600;
+    border-radius: 12px;
+    width: 100%;
+    align-self: center;
+  }
 }

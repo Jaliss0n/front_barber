@@ -4,6 +4,7 @@
   width: 85%;
   background-color: #24262c9c;
   border-radius: 12px;
+  min-height: 60vh;
 }
 
 .imageCard {

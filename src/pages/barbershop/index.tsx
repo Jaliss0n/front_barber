@@ -126,6 +126,7 @@ export default function BarberShop() {
 
         <div className={styles.groupCards}>
           <NewCard />
+          <NewCard />
         </div>
         <Rodape />
       </div>

@@ -10,19 +10,6 @@ import { ModelCard } from "../modelCard";
 import { WhiteTextField } from "../whiteTextField";
 import { useState } from "react";
 
-const style = {
-  position: "absolute" as "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "60%",
-  bgcolor: "#494e5b",
-  boxShadow: 24,
-  borderRadius: "12px",
-  display: "flex",
-  flexDirection: "column",
-  p: 4,
-};
 
 export default function NewCard() {
   const [open, setOpen] = useState<boolean>(false);
@@ -56,7 +43,7 @@ export default function NewCard() {
         }}
       >
         <Fade in={open}>
-          <Box sx={style}>
+          <div className={styles.modalCard}>
             <h2 className={styles.titleCardCreateBody}>Criar Corte</h2>
             <div className={styles.cardCreateBody}>
               <div className={styles.cardInput}>
@@ -120,9 +107,11 @@ export default function NewCard() {
                   description={description}
                 />
               </div>
+              
+              <button className={styles.buttonAcceptMob}>ENVIAR</button>
             </div>
             <button className={styles.buttonAccept}>ENVIAR</button>
-          </Box>
+          </div>
         </Fade>
       </Modal>
     </div>
