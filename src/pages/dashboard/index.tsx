@@ -63,9 +63,7 @@ export default function Dash() {
             <h5>Bem vindo de volta $nomeAdmin</h5>
           </div>
         </div>
-        <div style={{ display: "flex", justifyContent: "center", width: '100%',  }}>
-          {switchScreen(numberPag)}
-        </div>
+        <div className={styles.switchScreen}>{switchScreen(numberPag)}</div>
       </div>
     </div>
   );
