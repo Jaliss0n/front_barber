@@ -34,7 +34,7 @@ export default function Dash() {
           <button onClick={() => setNumberPag(1)} className={styles.buttonDash}>
             <AddBusinessIcon sx={{ marginRight: "20px" }} /> Barbearia
           </button>
-          <button className={styles.buttonDash}>
+          <button onClick={() => setNumberPag(2)} className={styles.buttonDash}>
             <MoreTimeIcon sx={{ marginRight: "20px" }} /> Horarios
           </button>
           <h5>Informações Pessoais</h5>

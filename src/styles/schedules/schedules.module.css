@@ -1,0 +1,132 @@
+.bodySchedules {
+    display: flex;
+    background-color: #494e5b;
+    width: 80%;
+    border-radius: 12px;
+    margin-bottom: 5%;
+    
+}
+
+.titleSchedules, .titlePause {
+    position: absolute;
+    top: -5%;
+    background-color: #3c73d2;
+    border-radius: 12px;
+    padding: 2%;
+    color: white;
+    font-weight: 600;
+}
+
+.titlePause  {
+    position: absolute;
+    top: -9%;
+    background-color: #3c73d2;
+    border-radius: 12px;
+    padding: 2%;
+    color: white;
+    font-weight: 600;
+}
+
+.titleDay {
+    position: absolute;
+    top: -6%;
+    background-color: #3c73d2;
+    border-radius: 12px;
+    padding: 2%;
+    color: white;
+    font-weight: 600;
+}
+
+.titleHours {
+    position: absolute;
+    top: -13%;
+    background-color: #3c73d2;
+    border-radius: 12px;
+    padding: 2%;
+    color: white;
+    font-weight: 600;
+}
+
+
+.cardShedules {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    /* background-color: #203e8b; */
+    border-radius: 12px;
+    margin: 1%;
+}
+
+.viewSchedules {
+    margin: 1%;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.findBarberCard,.findPauseCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: #24262c9c;
+    padding: 8% 5% 5% 5%;
+    margin: 5% 5% 5% 5%;
+}
+
+
+.findDayCard {
+    position: relative;
+    display: flex;
+    border-radius: 12px;
+    background-color: #24262c9c;
+    padding: 8% 5% 5% 5%;
+    margin: 5%
+}
+
+.buttonSchedules {
+    background-color: #3c73d2;
+    margin: 2% 5% 2% 5%;
+    padding: 3%;
+    border-radius: 12px;
+    color: white;
+    font-weight: 700;
+    width: 90%;
+}
+
+.buttonSchedules:hover{
+    background-color: #325fac;
+    transition-duration: 400ms;
+}
+
+.barberView {
+    display: flex;
+    align-items: center;
+    border: 2px solid #cdcdcd;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.barberView p {
+    color: white;
+    margin: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .bodySchedules {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0%;
+    }
+   
+    .cardShedules{
+        margin-top: 20%;
+        width: 100%;
+    }
+
+    .viewSchedules {
+        width: 100%;
+    }
+}
