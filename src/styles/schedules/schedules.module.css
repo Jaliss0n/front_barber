@@ -4,7 +4,6 @@
     width: 80%;
     border-radius: 12px;
     margin-bottom: 5%;
-    
 }
 
 .titleSchedules, .titlePause {
@@ -37,22 +36,10 @@
     font-weight: 600;
 }
 
-.titleHours {
-    position: absolute;
-    top: -13%;
-    background-color: #3c73d2;
-    border-radius: 12px;
-    padding: 2%;
-    color: white;
-    font-weight: 600;
-}
-
-
 .cardShedules {
     display: flex;
     flex-direction: column;
     width: 48%;
-    /* background-color: #203e8b; */
     border-radius: 12px;
     margin: 1%;
 }
@@ -75,7 +62,6 @@
     margin: 5% 5% 5% 5%;
 }
 
-
 .findDayCard {
     position: relative;
     display: flex;
@@ -86,6 +72,9 @@
 }
 
 .buttonSchedules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #3c73d2;
     margin: 2% 5% 2% 5%;
     padding: 3%;
@@ -98,20 +87,6 @@
 .buttonSchedules:hover{
     background-color: #325fac;
     transition-duration: 400ms;
-}
-
-.barberView {
-    display: flex;
-    align-items: center;
-    border: 2px solid #cdcdcd;
-    padding: 10px;
-    width: 100%;
-    border-radius: 10px;
-}
-
-.barberView p {
-    color: white;
-    margin: 5px;
 }
 
 @media screen and (max-width: 900px) {

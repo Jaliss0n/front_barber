@@ -1,23 +1,24 @@
 import {
-  Button,
-  ButtonGroup,
+  Backdrop,
+  Fade,
   FormControl,
   FormGroup,
   FormHelperText,
+  Modal,
 } from "@mui/material";
 import styles from "../../styles/schedules/schedules.module.css";
 import React from "react";
 import { AutoCompleteWhite } from "@/components/autoCompleteWhite";
 import TimeComponent from "@/components/timePicker";
 import FormControlLabelCheckbox from "@/components/formControlLabel";
-
-const buttons = [
-  <Button key="one">Visualizar</Button>,
-  <Button key="two">Editar</Button>,
-  <Button key="three">Deletar</Button>,
-];
+import OutboundIcon from "@mui/icons-material/Outbound";
+import ModalSchedules from "@/components/modals/modalSchedules";
 
 export default function Schedules() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div className={styles.bodySchedules}>
       <div className={styles.cardShedules}>
@@ -54,42 +55,34 @@ export default function Schedules() {
           </FormControl>
         </div>
         <div>
-          <button className={styles.buttonSchedules}>
-            VISUALIZAR HORARIOS
-          </button>
           <button className={styles.buttonSchedules}>ATUALIZAR HORARIOS</button>
+          <button
+            onClick={() => handleOpen()}
+            className={styles.buttonSchedules}
+          >
+            <OutboundIcon sx={{ fontSize: "1.8em", margin: "0 4% 0 4%" }} />
+            VISUALIZAR HORARIOS EXISTENTES
+          </button>
         </div>
-
-        {/* <div className={styles.findPauseCard}>
-          <h3 className={styles.titleHours}>Horarios</h3>
-          <div className={styles.barberView}>
-            <p>$Nome_Barbeiro</p>
-            <Button
-              sx={{ margin: "3px" }}
-              color="info"
-              variant="outlined"
-              key="one"
-            >
-              Abrir
-            </Button>
-            <Button
-              sx={{ margin: "3px" }}
-              color="warning"
-              variant="outlined"
-              key="two"
-            >
-              Editar
-            </Button>
-            <Button
-              sx={{ margin: "3px" }}
-              color="error"
-              variant="outlined"
-              key="three"
-            >
-              Deletar
-            </Button>
-          </div>
-        </div> */}
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          slots={{ backdrop: Backdrop }}
+          slotProps={{
+            backdrop: {
+              timeout: 500,
+            },
+          }}
+        >
+          <Fade in={open}>
+            <div>
+              <ModalSchedules />
+            </div>
+          </Fade>
+        </Modal>
       </div>
     </div>
   );
