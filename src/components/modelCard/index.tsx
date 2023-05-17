@@ -1,6 +1,6 @@
 import styles from "../../styles/card/card.module.css";
 import imgDefault from "../../../images/profile.jpg";
-import PaidIcon from '@mui/icons-material/Paid';
+import PaidIcon from "@mui/icons-material/Paid";
 
 interface cardTypes {
   nameService: string;
@@ -15,7 +15,6 @@ export const ModelCard: React.FC<cardTypes> = ({
   price,
   imageCard,
 }) => {
-  console.log(price)
   if (imageCard === null) {
     return (
       <div className={styles.card}>
@@ -25,7 +24,7 @@ export const ModelCard: React.FC<cardTypes> = ({
           <p>{description}</p>
           <div className={styles.buttonGroupCard}>
             <div className={styles.moneyCard}>
-              <PaidIcon sx={{marginRight: '10px', fontSize: '2.5em'}}/>
+              <PaidIcon sx={{ marginRight: "10px", fontSize: "2.5em" }} />
               <p>{price}</p>
             </div>
             <button className={styles.buttonAgendar}>AGENDAR</button>
@@ -44,7 +43,7 @@ export const ModelCard: React.FC<cardTypes> = ({
           <p>{description}</p>
           <div className={styles.buttonGroupCard}>
             <div className={styles.moneyCard}>
-              <PaidIcon sx={{marginRight: '10px', fontSize: '2.5em'}}/>
+              <PaidIcon sx={{ marginRight: "10px", fontSize: "2.5em" }} />
               <p>{price}</p>
             </div>
             <button className={styles.buttonAgendar}>AGENDAR</button>

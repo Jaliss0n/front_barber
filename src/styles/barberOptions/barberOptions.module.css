@@ -1,0 +1,22 @@
+.barberView {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #cdcdcd;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 1% 0 1% 0
+}
+
+.barberView p {
+    color: white;
+    margin: 5px;
+}
+
+@media screen and (max-width: 900px) {
+    .buttonGroupSchedules {
+        display: flex;
+        flex-direction: column;
+    }
+}

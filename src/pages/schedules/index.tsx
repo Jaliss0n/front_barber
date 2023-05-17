@@ -1,24 +1,15 @@
-import {
-  Backdrop,
-  Fade,
-  FormControl,
-  FormGroup,
-  FormHelperText,
-  Modal,
-} from "@mui/material";
+import { FormControl, FormGroup, FormHelperText } from "@mui/material";
 import styles from "../../styles/schedules/schedules.module.css";
 import React from "react";
 import { AutoCompleteWhite } from "@/components/autoCompleteWhite";
 import TimeComponent from "@/components/timePicker";
 import FormControlLabelCheckbox from "@/components/formControlLabel";
-import OutboundIcon from "@mui/icons-material/Outbound";
-import ModalSchedules from "@/components/modals/modalSchedules";
 
-export default function Schedules() {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+interface Props {
+  handleCloseModal: () => void;
+}
 
+export default function Schedules({ handleCloseModal }: Props) {
   return (
     <div className={styles.bodySchedules}>
       <div className={styles.cardShedules}>
@@ -55,34 +46,13 @@ export default function Schedules() {
           </FormControl>
         </div>
         <div>
-          <button className={styles.buttonSchedules}>ATUALIZAR HORARIOS</button>
           <button
-            onClick={() => handleOpen()}
+            onClick={() => handleCloseModal()}
             className={styles.buttonSchedules}
           >
-            <OutboundIcon sx={{ fontSize: "1.8em", margin: "0 4% 0 4%" }} />
-            VISUALIZAR HORARIOS EXISTENTES
+            ATUALIZAR HORARIOS
           </button>
         </div>
-        <Modal
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          open={open}
-          onClose={handleClose}
-          closeAfterTransition
-          slots={{ backdrop: Backdrop }}
-          slotProps={{
-            backdrop: {
-              timeout: 500,
-            },
-          }}
-        >
-          <Fade in={open}>
-            <div>
-              <ModalSchedules />
-            </div>
-          </Fade>
-        </Modal>
       </div>
     </div>
   );

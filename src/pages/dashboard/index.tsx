@@ -2,7 +2,7 @@ import styles from "../../styles/dashbord/dashbord.module.css";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
 import MoreTimeIcon from "@mui/icons-material/MoreTime";
-import ContentCutIcon from "@mui/icons-material/ContentCut";
+import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import LockPersonIcon from "@mui/icons-material/LockPerson";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -31,11 +31,11 @@ export default function Dash() {
           <button className={styles.buttonDash}>
             <DashboardIcon sx={{ marginRight: "20px" }} /> Dashboard
           </button>
+          <button onClick={() => setNumberPag(3)} className={styles.buttonDash}>
+            <PersonAddIcon sx={{ marginRight: "20px" }} /> Funcionarios
+          </button>
           <button onClick={() => setNumberPag(1)} className={styles.buttonDash}>
             <AddBusinessIcon sx={{ marginRight: "20px" }} /> Barbearia
-          </button>
-          <button onClick={() => setNumberPag(2)} className={styles.buttonDash}>
-            <MoreTimeIcon sx={{ marginRight: "20px" }} /> Horarios
           </button>
           <h5>Informações Pessoais</h5>
           <button className={styles.buttonDashDown}>

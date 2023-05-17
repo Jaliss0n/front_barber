@@ -1,0 +1,58 @@
+.bodyFull {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: #494e5b;
+    border-radius: 12px;
+}
+
+.inputArea {
+    background-color: #24262c9c;
+    width: 100%;
+    margin: 3%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 12px;
+
+    /* tira esse min-heigh por responsividade */
+}
+
+.profileBarberShopDefault{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.profileBarber {
+    width: 50%;
+    border-radius: 12px;
+}
+
+.inputTextFilds{
+    width: 100%;
+    margin: 0 0 5% 0;
+}
+
+.inputTextFilds p {
+    color: white;
+}
+
+.buttonCad {
+    color: white;
+    background-color: #3c73d2;
+    width: 100%;
+    border-radius: 12px;
+    padding: 1%;
+    font-weight: 600;
+}
+
+.buttonCad:hover {
+    background-color: #244a8c;
+}
