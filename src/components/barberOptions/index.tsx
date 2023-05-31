@@ -3,6 +3,7 @@ import React from "react";
 import styles from "../../styles/barberOptions/barberOptions.module.css";
 import EmployeesModal from "../modals/modalSchedules/employeesModal";
 import Schedules from "@/pages/schedules";
+import ModalDelete from "../modals/modalDelete";
 
 interface Props {
   nameEmployee: string;
@@ -16,6 +17,10 @@ export default function BarberOptions({ nameEmployee }: Props) {
   const [openSchedule, setOpenSchedule] = React.useState(false);
   const handleOpenSchedule = () => setOpenSchedule(true);
   const handleCloseSchedule = () => setOpenSchedule(false);
+
+  const [openDelete, setOpenDelete] = React.useState(false);
+  const handleOpenDelete = () => setOpenDelete(true);
+  const handleCloseDelete = () => setOpenDelete(false);
 
   return (
     <div className={styles.barberView}>
@@ -44,6 +49,7 @@ export default function BarberOptions({ nameEmployee }: Props) {
           color="error"
           variant="outlined"
           key="three"
+          onClick={() => handleOpenDelete()}
         >
           Deletar
         </Button>
@@ -83,6 +89,28 @@ export default function BarberOptions({ nameEmployee }: Props) {
         <Fade in={openEdit}>
           <div>
             <EmployeesModal handleClose={handleCloseEdit} />
+          </div>
+        </Fade>
+      </Modal>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={openDelete}
+        onClose={handleCloseDelete}
+        closeAfterTransition
+        slots={{ backdrop: Backdrop }}
+        slotProps={{
+          backdrop: {
+            timeout: 500,
+          },
+        }}
+      >
+        <Fade in={openDelete}>
+          <div>
+            <ModalDelete
+              handleClose={handleCloseDelete}
+              nameEmploye={nameEmployee}
+            />
           </div>
         </Fade>
       </Modal>
