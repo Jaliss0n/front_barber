@@ -47,6 +47,7 @@
   justify-content: space-around;
   background-color: #24262c9c;
   border-radius: 12px;
+  padding: 3%;
   width: 50%;
 }
 
@@ -125,6 +126,7 @@
 
   .cardInput {
     margin-top: 10%;
+    padding: 5%;
   }
 
   .viewCard {

@@ -6,7 +6,7 @@ import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import LockPersonIcon from "@mui/icons-material/LockPerson";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import LogoutIcon from "@mui/icons-material/Logout";
-import logo from "../../../images/logo.png";
+import logo from "../../../images/logoGrizzlies.png";
 import profile from "../../../images/profile.jpg";
 import { useNavContext } from "@/context/navProvider";
 import switchScreen from "@/context/switchScreen";
@@ -38,7 +38,10 @@ export default function Dash() {
             <AddBusinessIcon sx={{ marginRight: "20px" }} /> Barbearia
           </button>
           <h5>Informações Pessoais</h5>
-          <button className={styles.buttonDashDown}>
+          <button
+            onClick={() => setNumberPag(4)}
+            className={styles.buttonDashDown}
+          >
             <LockPersonIcon sx={{ marginRight: "20px" }} />
             Dados
           </button>

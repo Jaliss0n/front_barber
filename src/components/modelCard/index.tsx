@@ -5,7 +5,7 @@ import PaidIcon from "@mui/icons-material/Paid";
 interface cardTypes {
   nameService: string;
   description: string;
-  price: number;
+  price: string;
   imageCard: File | null;
 }
 

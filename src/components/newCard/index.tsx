@@ -2,14 +2,12 @@ import styles from "../../styles/newCard/newCard.module.css";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { IconButton } from "@mui/material";
 import Backdrop from "@mui/material/Backdrop";
-import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import AddAPhotoIcon from "@mui/icons-material/AddAPhoto";
 import { ModelCard } from "../modelCard";
-import { WhiteTextField } from "../whiteTextField";
+import { WtextField } from "../whiteTextField";
 import { useState } from "react";
-
 
 export default function NewCard() {
   const [open, setOpen] = useState<boolean>(false);
@@ -20,7 +18,7 @@ export default function NewCard() {
   const [description, setDescription] = useState<string>(
     "Descrição de Exemplo"
   );
-  const [price, setPrice] = useState<number>(0);
+  const [price, setPrice] = useState<string>("preço de Exemplo");
 
   const [img, setImg] = useState<File | null>(null);
 
@@ -81,32 +79,17 @@ export default function NewCard() {
                 )}
 
                 <div className={styles.inputTexts}>
-                  <WhiteTextField
-                    color="primary"
-                    id="outlined-basic"
-                    onChange={(e) => setTitle(e.target.value)}
-                    inputProps={{ maxLength: 20 }}
-                    label={<p>Titulo do Serviço</p>}
-                    variant="outlined"
-                    sx={{ margin: "2.5% 5% 2.5% 5%" }}
+                  <WtextField
+                    setProp={setTitle}
+                    labelText="Titulo do Serviço"
                   />
-                  <WhiteTextField
-                    id="outlined-basic"
-                    onChange={(e) => setDescription(e.target.value)}
-                    inputProps={{ maxLength: 55 }}
-                    label={<p>Descrição do Serviço</p>}
-                    variant="outlined"
-                    sx={{ margin: "2.5% 5% 2.5% 5%" }}
+
+                  <WtextField
+                    setProp={setDescription}
+                    labelText="Descrição do Serviço"
                   />
-                  <WhiteTextField
-                    id="outlined-basic"
-                    type="number"
-                    onChange={(e) => setPrice(parseInt(e.target.value))}
-                    inputProps={{ maxLength: 55 }}
-                    label={<p>Preço</p>}
-                    variant="outlined"
-                    sx={{ margin: "2.5% 5% 2.5% 5%" }}
-                  />
+
+                  <WtextField setProp={setPrice} labelText="Preço" />
                 </div>
               </div>
 
@@ -118,7 +101,7 @@ export default function NewCard() {
                   price={price}
                 />
               </div>
-              
+
               <button className={styles.buttonAcceptMob}>ENVIAR</button>
             </div>
             <button className={styles.buttonAccept}>ENVIAR</button>

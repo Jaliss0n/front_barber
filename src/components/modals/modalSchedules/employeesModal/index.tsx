@@ -1,4 +1,4 @@
-import { WhiteTextField } from "@/components/whiteTextField";
+import { WtextField } from "@/components/whiteTextField";
 import React, { useState } from "react";
 import styles from "../../../../styles/employeesModal/employeesModal.module.css";
 import ImageUpload from "@/components/imageUploadButton";
@@ -32,27 +32,8 @@ export default function EmployeesModal({ handleClose }: Props) {
           )}
         </div>
         <div className={styles.inputTextFilds}>
-          <WhiteTextField
-            fullWidth
-            color="primary"
-            id="outlined-basic"
-            onChange={(e) => setName(e.target.value)}
-            inputProps={{ maxLength: 20 }}
-            label={<p>Nome do Funcionario</p>}
-            variant="outlined"
-            sx={{ margin: "2.5% 0 2.5% 0" }}
-          />
-          <WhiteTextField
-            fullWidth
-            color="primary"
-            id="outlined-basic"
-            type="number"
-            onChange={(e) => setCpf(parseInt(e.target.value))}
-            inputProps={{ maxLength: 20 }}
-            label={<p>CPF</p>}
-            variant="outlined"
-            sx={{ margin: "2.5% 0 2.5% 0" }}
-          />
+          <WtextField setProp={setName} labelText="Nome do Funcionario" />
+          <WtextField setProp={setName} labelText="CPF" />
         </div>
         <button onClick={() => handleClose()} className={styles.buttonCad}>
           Cadastrar Funcionario

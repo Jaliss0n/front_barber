@@ -8,7 +8,9 @@ export default function FormControlLabelCheckbox({
 }) {
   return (
     <FormControlLabel
-      control={<Checkbox sx={{ color: "white" }} defaultChecked />}
+      control={
+        <Checkbox sx={{ color: "white" }} color="default" defaultChecked />
+      }
       label={<p style={{ color: "#d3d3d3" }}>{labelProps}</p>}
     />
   );

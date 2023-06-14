@@ -1,0 +1,46 @@
+.bodyData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 84.8vh;
+}
+
+.bodyCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 12px;
+    width: 30%;
+    padding: 3%;
+    background-color: #494e5b;
+    height: 70%;
+    position: relative;
+}
+
+.titleDataPage {
+    position: absolute;
+    top: -4%;
+    left: 5%;
+    background-color: #3c73d2; 
+    padding: 2%;
+    border-radius: 12px;
+    font-weight: 600;
+    color: white;
+}
+
+.bodyCard p {
+    color: white;
+}
+
+@media screen and (max-width: 900px) {
+    .bodyData {
+        height: 100vh;
+        padding-top: 10%;
+    }
+
+    .bodyCard {
+        width: 90%;
+        padding: 5%;
+    }
+}

@@ -19,7 +19,7 @@ const AutoCompleteWhiteStyles = styled(Autocomplete)({
       color: "white",
     },
     "&:hover fieldset": {
-      borderColor: "#3c73d2",
+      borderColor: "#00cfc8;",
     },
     "&.Mui-focused fieldset": {
       borderColor: "white",
@@ -35,11 +35,11 @@ export function AutoCompleteWhite({ labelProps }: { labelProps: string }) {
       disablePortal
       id="combo-box-demo"
       options={defaultValue}
-      sx={{ marginBottom: "4%" }}
+      sx={{ margin: "2.5% 0 2.5% 0" }}
       renderInput={(params) => (
         <TextField
           {...params}
-          label={<p style={{ color: "#d3d3d3" }}>{labelProps}</p>}
+          label={<p style={{ color: "#ffffff" }}>{labelProps}</p>}
         />
       )}
     />

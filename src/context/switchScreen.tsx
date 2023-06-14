@@ -1,7 +1,7 @@
 import Schedules from "@/pages/schedules";
 import BarberShop from "../pages/barbershop/index";
-import ModalSchedules from "@/components/modals/modalSchedules";
 import Employees from "@/pages/employees";
+import DataPage from "@/pages/dataPage";
 
 export default function switchScreen(n: number) {
   switch (n) {
@@ -11,5 +11,7 @@ export default function switchScreen(n: number) {
       return <Schedules />;
     case 3:
       return <Employees />;
+    case 4:
+      return <DataPage />;
   }
 }
